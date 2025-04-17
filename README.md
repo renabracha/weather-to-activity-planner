@@ -69,22 +69,22 @@ This keeps your project dependencies isolated:
 This will start a local web server and open the application in your browser. Press the Analyse button to view the results. 
 
 ## Web app in action
-# English
+### English
 ![Alt text for screen reader](https://github.com/renabracha/weather-to-activity-planner/blob/main/0_enter_location_en.jpg?raw=true)
 ![Alt text for screen reader](https://github.com/renabracha/weather-to-activity-planner/blob/main/1_enter_country_en.jpg?raw=true)
 ![Alt text for screen reader](https://github.com/renabracha/weather-to-activity-planner/blob/main/2_forecast_recommendations_en.jpg?raw=true)
 
-# Japanese
+### Japanese
 ![Alt text for screen reader](https://github.com/renabracha/weather-to-activity-planner/blob/main/0_enter_location_ja.jpg?raw=true)
 ![Alt text for screen reader](https://github.com/renabracha/weather-to-activity-planner/blob/main/1_enter_country_ja.jpg?raw=true)
 ![Alt text for screen reader](https://github.com/renabracha/weather-to-activity-planner/blob/main/2_forecast_recommendations_ja.jpg?raw=true)
 
-# Spanish
+### Spanish
 ![Alt text for screen reader](https://github.com/renabracha/weather-to-activity-planner/blob/main/0_enter_location_es.jpg?raw=true)
 ![Alt text for screen reader](https://github.com/renabracha/weather-to-activity-planner/blob/main/1_enter_country_es.jpg?raw=true)
 ![Alt text for screen reader](https://github.com/renabracha/weather-to-activity-planner/blob/main/2_forecast_recommendations_es.jpg?raw=true)
 
-# Hebrew
+### Hebrew
 ![Alt text for screen reader](https://github.com/renabracha/weather-to-activity-planner/blob/main/0_enter_location_he.jpg?raw=true)
 ![Alt text for screen reader](https://github.com/renabracha/weather-to-activity-planner/blob/main/1_enter_country_he.jpg?raw=true)
 ![Alt text for screen reader](https://github.com/renabracha/weather-to-activity-planner/blob/main/2_forecast_recommendations_he.jpg?raw=true)
