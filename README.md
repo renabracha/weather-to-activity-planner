@@ -6,27 +6,28 @@ I would like to thank the following individuals and organisations that made this
 * OpenWeather for providing me access to their current weather data through a free API key. I appreciated the API instructions were clear, concise and yet in a friendly tone. The implementation was smooth and I started pulling the weather data right away. 
 
 ## Abstract
-The project showcases how well-crafted prompting is sufficient to build a Web app that pulls current weather data for the user's location, provides a weather forecast and suggests what to wear, where to go and what to do in real-time in a language of your choice, with no need to build an Agent with heavy programming.
-<br>
-The application follows the sequence below:
-1. Ask for user location.
-2. Get the current weather data based on (1).  
-3. Interpret the weather data.
-4. Give recommendations based on (3).
+This project demonstrates how effective prompt engineering alone can power a fully functional web app that retrieves real-time weather data based on the user's location, interprets it, and offers personalized suggestions - including what to wear, where to go, and what to do - all in the user's preferred language. No complex agent design or heavy programming is required.
+<br><br>
+The application follows this sequence:
+1. Prompt the user to enter their location.
+2. Retrieve current weather data based on the input.
+3. Analyze and interpret the weather information.
+4. Provide personalized activity, clothing, and destination recommendations.
 
 ## Development Notes
-* Langchain provides a structure to the code, enhancing readability with the sequencing of modular prompt templates. 
-* Some location names exist in multiple countries. For instance, "London" could refer to the capital of the UK or a city in Ontario, Canada. When a user enters a location, the model uses its geographical knowledge to disambiguate the name.
-* Despite the limitations of the free-tier API key, the model was able to interpret minimal weather data into meaningful forecasts. It further enriched the output with suggestions for indoor and outdoor activities, recommended places to visit, and appropriate outfits—leveraging its built-in knowledge of tourism.
+* **LangChain** adds structure and modularity to the code by sequencing prompt templates for weather analysis, recommendation generation, and localization.
+* Some place names are inherently ambiguous — for example, “London” could refer to the capital of the UK or a city in Canada. The model leverages its pre-trained geographic knowledge to detect such cases and prompts the user for clarification when necessary.
+* Despite the constraints of a free-tier weather API (limited data), the model produces meaningful interpretations. It supplements minimal weather data with creative, practical suggestions for indoor/outdoor activities, tourist spots, and weather-appropriate outfits - drawing on the model's general knowledge.
 
 ## Challenges
-* I wanted the Planner to communicate in the user's language, regardless of where they are. Devising a prompt that convinces Groq to switch from English 
-to the language the user is using took some doing. Groq receives three clues to figure out the language: 1) the user's location (city), 2) country 
-(after disambiguation due to a city of the same name, like 'London', existing in multiple countries), and 3) the writing system the user uses to enter 
-their location. It correctly identifies the clues every time, but only a long-winded and repetitive prompt did the job. It just goes to show what seems 
-obvious to one is clearly not obvious to another.
-* What started off as a Langchain sequencing demonstration in a .ipynb file on Google Colab morphed into an unrecognisable beast when it came to packaging it as a streamlit Web app in a .py file. Unlike some previous streamlit apps I worked on, this one was convoluted so much so that all the functions had to be 
-re-written as streamlit functions with a lot of help from Claude. 
+* A key goal was for the Planner to communicate in the user's language, no matter their location. Achieving this required crafting a detailed and somewhat repetitive prompt to encourage Groq to switch from English. The model is guided by three cues:
+  1. The user's entered location (e.g., city).
+  2. The disambiguated country name.
+  3. The writing system (script) used when entering the location.
+
+  While Groq correctly interprets the clues every time, it took significant prompt tuning to achieve the desired multilingual output. What feels obvious to humans often needs to be spelled out for LLMs.
+
+* What began as a LangChain sequencing demo in a Jupyter Notebook on Google Colab evolved into a significantly more complex Streamlit app. Unlike earlier projects, packaging this logic into a `.py` script required rewriting nearly every function using Streamlit’s interactive UI patterns - with substantial help from Claude to restructure the logic for a web-based workflow.
 
 ## Installation
 To run weather_to_activity_planner.py, do the following:
